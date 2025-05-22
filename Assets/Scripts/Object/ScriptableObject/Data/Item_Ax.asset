@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Item_Ax
   m_EditorClassIdentifier: 
   itemName: Ax
-  itemDescription: "\uC774\uB3D9\uC18D\uB3C4\uAC00 \uBE68\uB77C\uC9C4\uB2E4."
+  itemDescription: "\uC7A5\uCC29 \uC2DC \uC774\uB3D9\uC18D\uB3C4\uAC00 \uBE68\uB77C\uC9C4\uB2E4."
+  itemInteractKey: "E Key\uB97C \uB20C\uB7EC\uC11C \uC7A5\uCC29"
   type: 0
   icon: {fileID: 21300000, guid: 06e8d836c76eb494db7ab3784ffcb0eb, type: 3}
   dropPrefeb: {fileID: 179786090207307921, guid: 951162f999315a9439edcfc7a92506fb, type: 3}
   isStack: 0
   maxStack: 0
+  consumbales: []

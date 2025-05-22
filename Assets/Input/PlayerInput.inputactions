@@ -33,7 +33,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Interaction",
+                    "name": "Interctable",
                     "type": "Button",
                     "id": "1c3ba7b5-6aa4-4040-9174-0903220e2579",
                     "expectedControlType": "Button",
@@ -127,7 +127,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Interaction",
+                    "action": "Interctable",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
