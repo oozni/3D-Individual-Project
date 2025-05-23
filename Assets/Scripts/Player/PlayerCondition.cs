@@ -55,4 +55,8 @@ public class PlayerCondition : MonoBehaviour
     {
         Debug.Log("Die");
     }
+    public  void Heal()
+    {
+
+    }
 }

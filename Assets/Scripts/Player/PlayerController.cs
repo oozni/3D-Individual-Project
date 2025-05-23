@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,9 @@ public class PlayerController : MonoBehaviour
     private float currentYLook;
     private Vector2 mouseDeta;
 
+    public bool conLook = true;
+    public Action inventory;
+
 
     Rigidbody _rigidbody;
     
@@ -31,7 +35,14 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Look();
+
+    }
+    private void LateUpdate()
+    {
+        if (conLook == true)
+        {
+            Look();
+        }
     }
     // Update is called once per frame
     private void FixedUpdate()
@@ -92,6 +103,23 @@ public class PlayerController : MonoBehaviour
     public void OnLook(InputAction.CallbackContext context)
     {
         mouseDeta = context.ReadValue<Vector2>();
+    }
+    #endregion
+
+    #region Inventory
+    public void OnInventory(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            inventory?.Invoke();
+            ToggleCursor();
+        }
+    }
+    private void ToggleCursor()
+    {
+        bool toggie = Cursor.lockState == CursorLockMode.Locked;
+        Cursor.lockState = toggie ? CursorLockMode.None : CursorLockMode.Locked;
+        conLook = !toggie;
     }
     #endregion
 }
